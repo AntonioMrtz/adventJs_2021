@@ -2,7 +2,7 @@ function countDecorations(bigTree,flag) {
 
     //var decorations=0;
 
-    function countDecorations_recursive(bigTree,flag){
+    function countDecorations_recursive(bigTree){
 
         let count=0;
 
@@ -11,14 +11,14 @@ function countDecorations(bigTree,flag) {
 
         if(bigTree.left!=null){
             
-            count+=countDecorations_recursive(bigTree.left,1);   
+            count+=countDecorations_recursive(bigTree.left);   
 
         }
 
         if(bigTree.right!=null){
 
 
-            count+=countDecorations_recursive(bigTree.right,1);  
+            count+=countDecorations_recursive(bigTree.right);  
 
         }
 
@@ -28,7 +28,7 @@ function countDecorations(bigTree,flag) {
     }
 
 
-    let decorations=countDecorations_recursive(bigTree,0)
+    let decorations=countDecorations_recursive(bigTree)
     
     console.log(decorations)
 
